@@ -36,12 +36,12 @@ public class KeepAliveJobService extends JobService {
         jobScheduler.schedule(builder.build());
     }
 
-    private static final String TAG = "KeepAliveJobService";
+    private static final String TAG = "zyz";
 
     @Override
     public boolean onStartJob(JobParameters params) {
         Log.e(TAG, "开启job");
-        Toast.makeText(getBaseContext(), "start", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getBaseContext(), "start", Toast.LENGTH_SHORT).show();
         //如果7.0以上 轮训
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             StartJob(this);
