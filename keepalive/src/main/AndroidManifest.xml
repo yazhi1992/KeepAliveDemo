@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.yazhi1992.keepalive">
+
+    <!--Jobservice-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <application>
+        <service android:name=".job.KeepAliveJobService"
+                 android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <service android:name=".KeepAliveService"
+                 android:permission="android.permission.BIND_JOB_SERVICE"/>
+    </application>
+
+</manifest>
